@@ -1,3 +1,111 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Custom properties */
+:root{
+    --background-color: rgb(0, 152, 190);
+
+    --title-font-family: "Playfair Display", serif;
+    --content-font-family: "Roboto", sans-serif;
+}
+
+
+
+/* Global layout */
+
+/* html{
+    width: 100vw;
+    height: 100vh;
+} */
+
 body{
-    background-color: bisque;
+    font-family: var(--title-font-family);
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    background: linear-gradient(170deg, var(--background-color) 50%, rgb(255, 255, 255) 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 960px;
+}
+
+/* Elements */
+.about-me-holder{
+    background-color: white;
+    box-shadow: 1px 1px 5px 2px rgb(180, 180, 180);
+}
+
+.about-me-content{
+    max-width: 400px;
+}
+
+.about-me-links{
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+}
+
+.cards-holder{
+    max-width: 960px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.article-holder{
+    flex: 1;
+}
+
+.article-title-holder{
+    display: flex;
+    flex-direction: row;
+}
+
+.article-screenshot{
+    width: 260px;
+    height: 200px;
+    background-color: red;
+}
+
+p{
+    font-family: var(--content-font-family);
+}
+
+.footer-content-phone, .footer-content-mail{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-picture{
+    width: auto;
+    height: 424px;
+}
+
+
+
+/* Media queries */
+@media screen and (min-width: 530px) {
+    header {flex-direction: row;}
+    .cards-holder{flex-direction: row;}
+    footer {flex-direction: row;}
 }
